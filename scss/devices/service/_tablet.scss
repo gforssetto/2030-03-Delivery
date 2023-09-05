@@ -1,0 +1,88 @@
+@media (min-width: $tabletVersion) {
+
+    // header - span
+    header {
+        aside {
+            span {
+                width: 2vw;
+                height: 2vw;
+            }
+        }
+    }
+    // services section
+    .services {
+        article {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            aside {
+                width: 45%;
+            }
+        }
+
+    }
+
+    // private classes
+    %Inputsize {
+        height: 10vh;
+        width: 100%;
+        border: 2px solid red;
+    }
+
+    // quote section
+    .quote {
+        article {
+            display: flex;
+            justify-content: left;
+
+            section {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                column-gap: 20%;
+                justify-content: flex-start;
+                padding-bottom: 10vh;
+            }
+        }
+
+        form {
+            input,
+            select,
+            [type="submit"]{
+                @extend %Inputsize;
+
+            }
+        }
+
+    }
+
+    // pricing section 
+    .pricing {
+        
+        article {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            aside {
+                width: 30%;
+            }
+        }
+
+        ul {
+            
+            li {
+                height: 15vh;
+            }
+        }
+
+        aside {
+            article {
+                padding: 5vh;
+            }
+        }
+    }
+}

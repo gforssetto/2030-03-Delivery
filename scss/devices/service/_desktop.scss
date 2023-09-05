@@ -1,0 +1,32 @@
+@media (min-width: $desktopVersion) {
+    // services section 
+    .services {
+        article {
+            aside {
+                width: 20%;
+            }
+        }
+    }
+
+    // quote section 
+    .quote {
+        width: 100%;
+        padding: unset;
+        display: flex;
+        flex-direction: row;
+        padding-left: 2vh;
+        
+        article {
+            width: 80%;
+            > section {
+                column-gap: 10%;
+            }
+        }
+
+        aside {
+            > h3 {
+                font-size: 25px;
+            }
+        }
+    }
+}

@@ -1,0 +1,325 @@
+@media (min-width: $tabletVersion) {
+    // NAV
+    nav {
+        > article {
+            ul {
+                width: 30%;
+            }
+
+            a {
+                font-size: 16px;
+            }
+
+            a:hover {
+                color: $mainColor;
+            }
+        }
+
+        > section {
+            min-height: 12vh;
+
+            h2 {
+                font-size: 32px;
+                align-items: center;
+            }
+        }
+
+        details {
+            a:hover {
+                background-color: $mainColor;
+                color: white;
+            }
+        }
+    }
+
+    summary {
+        font-size: 20px;
+    }
+
+    // HEADER
+    .about-header {
+        aside {
+            > article {
+                column-gap: 2vw;
+            }
+
+            span {
+                width: 2vw;
+                height: 2vw;
+            }
+
+            a:hover {
+                color: $mainColor;
+            }
+        }
+    }
+
+    // MAIN
+    // MAIN LEFT
+    .main-left {
+        > figure > img {
+            height: 60vh;
+        }
+
+        figcaption {
+            padding: 5%;
+
+            aside {
+                column-gap: 1vw;
+            }
+
+            img {
+                width: 5vw;
+                height: 5vw;
+            }
+        }
+
+        a {
+            @include displayRow(1vw);
+            align-items: center;
+        }
+
+        a:hover {
+            column-gap: 4vw;
+            font-weight: 800;
+        }
+    }
+
+    // MAIN RIGHT
+    .main-right {
+        > figure {
+            > img {
+                width: 85%;
+                height: 50vh;
+            }
+        }
+    }
+
+    // KEYWORD
+    .keyword {
+        padding: 5%;
+
+        > form {
+            [type="text"] {
+                width: 92%;
+                padding: 3%;
+            }
+
+            [type="submit"] {
+                width: 8%;
+                border: 2px solid $mainColor;
+            }
+
+            [type="submit"]:hover {
+                cursor: pointer;
+                background-color: transparent;
+            }
+        }
+    }
+
+    // CATEGORIES
+    .categories {
+        > h3 {
+            font-size: 23px;
+            font-weight: 700;
+        }
+
+        > ul {
+            padding: 5%;
+        }
+
+        li {
+            padding: 2%;
+
+            > p {
+                width: 7vw;
+            }
+
+            p:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+
+    // RECENT POST
+    .post {
+        > h3 {
+            font-size: 23px;
+            font-weight: 700;
+        }
+
+        > aside {
+            img {
+                width: 10vw;
+                height: 10vw;
+            }
+        }
+    }
+
+    // TAG CLOUD
+    .tag {
+        > h3 {
+            font-size: 23px;
+            font-weight: 700;
+        }
+
+        > aside {
+            column-gap: 1vw;
+
+            > p {
+                padding: 1% 2%;
+            }
+        }
+    }
+
+    // PLAIN TEXT
+    .plain {
+        > h3 {
+            font-size: 23px;
+            font-weight: 700;
+        }
+
+        > aside {
+            padding: 5%;
+        }
+
+        > aside > a {
+            width: 20%;
+            padding: 2%;
+            border: 2px solid $mainColor;
+
+            &:hover {
+                background-color: transparent;
+                color: $mainColor;
+            }
+        }
+    }
+
+    // MAIN BOTTOM
+    .main-bottom {
+        row-gap: 5vh;
+
+        > article > aside {
+            padding: 4%;
+            align-items: center;
+            justify-content: center;
+
+            i {
+                padding-top: 0;
+            }
+
+            p {
+                font-size: 22px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    // CONTACT
+    .contact {
+        > small {
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        > h2 {
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        > form {
+            padding: 5%;
+
+            > input,
+            textarea {
+                padding: 3% 5%;
+            }
+        }
+
+        [type="submit"] {
+            padding: 2%;
+            width: 30%;
+            font-size: 17px;
+            text-align: center;
+            border: 2px solid $mainColor;
+
+            &:hover {
+                cursor: pointer;
+                background-color: transparent;
+                color: $mainColor;
+            }
+        }
+    }
+
+    // FOOTER
+    footer {
+        align-items: center;
+
+        a:hover {
+            color: $mainColor;
+        }
+
+        > article {
+            width: 90%;
+            min-height: 70vh;
+            flex-direction: row;
+            justify-content: space-between;
+
+            ol {
+                column-gap: 1vh;
+            }
+        }
+
+        aside {
+            width: 20%;
+
+            &:first-child {
+                width: 30%;
+            }
+
+            &:last-child {
+                width: 45%;
+            }
+
+            a:hover {
+                color: white;
+                text-decoration: underline white;
+            }
+
+            ol a:hover {
+                background-color: white;
+                color: $footerColor;
+                text-decoration: none;
+            }
+        }
+
+        > section {
+            width: 100%;
+            align-items: flex-start;
+
+            p {
+                width: 80%;
+            }
+
+            ul {
+                width: 95%;
+                flex-direction: row-reverse;
+                justify-content: right;
+            }
+
+            li {
+                width: 10%;
+            }
+
+            a {
+                width: 100%;
+            }
+        }
+
+        [type="submit"]:hover {
+            background-color: $footerColor;
+            color: $mainColor;
+        }
+    }
+}

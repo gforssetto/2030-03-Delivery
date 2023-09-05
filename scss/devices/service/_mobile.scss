@@ -1,0 +1,535 @@
+@media (min-width: $mobileVersion) {
+
+    * {
+        font-family: $fontFamily;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    // private classes
+    %flexColumn {
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid black; */
+    }
+
+    // nav
+    nav {
+        position: relative;
+       
+        > article {
+            background-color: $footerColor;
+
+            span {
+                display: flex;
+                align-items: center;
+                column-gap: 2vh;
+                color: white;
+            }
+    
+            i,
+            a {
+                color: white;
+                font-size: 14px;
+            }
+            
+            ul {
+                display: flex;
+                width: 50%;
+            }
+    
+            li {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        > section {
+            width: 92%;
+            padding: 0vh 4%;
+            min-height: 8vh;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h2 {
+                // width: 80%;
+                display: flex;
+                column-gap: 2vh;
+                color: $mainColor;
+            }
+
+            > ul,
+            > a {
+            display: none;
+            }
+        }
+
+        aside {
+            min-height: 14vh;
+            align-items: center;
+            justify-content: center;
+            row-gap: 2vh;
+        }
+
+        
+    }
+
+    details {
+        width: 92%;
+        position: absolute;
+        text-align: right;
+
+        ul {
+            position: absolute;
+            width: 100%;
+            padding-top: 1vh;
+        }
+
+        li {
+            display: flex;
+            width: 100%;
+            background-color: white;
+        }
+
+        a {
+            width: 100%;
+            padding: 2vh;
+            text-align: left;
+            color: $footerColor;
+            font-weight: 600;
+
+        }
+
+    }
+
+    summary {
+        color: gray;
+        border: 1px solid gainsboro;
+        padding: 1vh 2vh;
+        font-size: 17px;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // height: 5vh;
+        // width: 5vh;
+    }
+
+    // header
+    header {
+        background-image: url(/img/bg-header.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 35vh;
+
+        > article {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(40, 40, 40, 0.9);
+            @include displayColumn(5vh);
+            justify-content: center;
+            align-items: center;
+        }
+
+        aside {
+            @include displayColumn(2vh);
+            text-align: center;
+            align-items: center;
+
+            > h1 {
+                font-size: 45px;
+                color: white;
+                font-weight: 700;
+            }
+
+            > article {
+                @include displayRow(4vw);
+                align-items: center;
+            }
+
+            span {
+                width: 4vw;
+                height: 4vw;
+                background-color: white;
+                border-radius: 50%;
+            }
+
+            a {
+                color: white;
+            }
+        }
+    }
+
+    // all sections
+    .services, 
+    .quote, 
+    .pricing {
+        align-items: center;
+        row-gap: 2vh;
+        padding: 5%;
+
+        > blockquote {
+            padding: 5%;
+        }
+
+        h2 {
+            color: $footerColor;
+            width: 100%;
+            font-size: 20px;
+            font-weight: 800;
+            text-align: center;
+
+        }
+
+        h4 {
+            color: $mainColor;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+
+    // services section
+    .services {
+        aside {
+            @include displayColumn (3vh);
+            padding-bottom: 5%;
+            > section {
+                background-color: $mainColor;
+                height: 12vh;
+                align-items: center;
+                justify-content: center;
+                @include displayRow (5vh);
+            }
+        }
+
+        strong {
+            color: whitesmoke;
+        }
+
+        p  {
+            text-align: center;
+            color: gray;
+        }
+
+        a {
+            color: $mainColor;
+            display: flex;
+            justify-content: center;
+            text-decoration: underline lightgray;
+            transition: .6;
+
+
+            &:hover {
+                font-weight: 600;
+                font-size: 20px;
+                text-decoration: underline $mainColor;
+            }
+        } 
+
+    }
+
+    // quote section
+    .quote {
+        
+        background-color: whitesmoke;
+
+        blockquote,
+        p,
+        section {
+            padding: 1.5%;
+        }
+
+        h2, 
+        h4 {
+            text-align: left;
+        }
+
+        aside {
+            > h3 {
+               color: $mainColor;
+               font-size: 23px; 
+               padding-top: 5%;
+            }
+
+            > small {
+                color: $footerColor;
+                font-weight: 700;
+                padding-bottom: 2%;
+
+            }
+        }
+
+        > section {
+            @extend %flexColumn;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            background-color: $mainColor;
+        }
+
+        form {
+            padding: 10%;
+            width: 70%;
+            @extend %flexColumn;
+            @include displayColumn (3vh);
+            justify-content: center;
+            align-items: center;
+
+            input {
+                height: 7vh;
+                width: 100%;
+                border: none transparent;
+                color: gray;
+
+                &::placeholder {
+                    padding: 1%;
+                }
+            }
+
+            select {
+                height: 7vh;
+                width: 100%;
+                border: none transparent;
+                color: gray;
+                appearance: none;
+                background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat white right 0.75rem center/8px 10px;
+                padding: 1%;
+            }
+
+
+            [type="submit"] {
+                background-color: $footerColor;
+                border: none transparent;
+                color: whitesmoke;
+                font-size: 14px;
+                height: 5vh;
+                width: 100%;
+
+                &:hover {
+                    transition: .6;
+                    background-color: transparent;
+                    border: 2px solid whitesmoke;
+                    color: whitesmoke;
+                    /* border: 3px solid $footerColor;
+                    color: $footerColor; */
+                    font-weight: 600;
+                }
+            }
+
+        }
+    }
+
+    // pricing section
+    .pricing {
+        > article {
+            @include displayColumn (5vh);
+        }
+
+        aside {
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 5%;
+
+            > section { 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                height: 15vh;
+            }
+        }
+
+
+        aside {
+            blockquote {
+                width: 100%;
+                background-color: $mainColor;
+                height: 15vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+            }
+        }
+
+        aside {
+            article {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                row-gap: 5vh;
+                justify-content: center;
+            }
+        }
+
+        h3 {
+            color: $footerColor;
+            font-weight: 800;
+            font-size: 23px;
+            text-align: center;
+    
+        }
+
+        small {
+            color: gray;
+
+        }
+
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fe4802;
+            color: white;
+            width: 25vh;
+            height: 10vh;  
+            
+            &:hover {
+                transition: .6;
+                background-color: $footerColor;
+                color: white; 
+                font-weight: 800;
+                font-weight: 600;
+            }
+        }
+
+        ul {
+            padding: 5vh;
+
+            > li {  
+                color: gray;
+                height: 10vh;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+
+
+    }
+
+
+    // footer
+    footer {
+        background-color: $footerColor;
+
+        > article {
+            min-height: 150vh;
+            justify-content: center;
+            align-items: center;
+            row-gap: 5vh;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                row-gap: 3vh;
+            }
+
+            ol {
+                display: flex;
+                width: 50%;
+            }
+
+            li {
+                width: 100%;
+                column-gap: 2vh;
+                align-items: center;
+            }
+        }
+
+        > section {
+            border-top: 1px solid dimgray;
+            min-height: 20vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            row-gap: 2vh;
+
+            p {
+                width: 90%;
+                color: white;
+            }
+
+            ul {
+                display: flex;
+                width: 80%;
+            }
+
+            li {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+        }
+
+        span {
+            color: $mainColor;
+        }
+
+        aside {
+            width: 90%;
+            row-gap: 4vh;
+        }
+
+        a {
+            color: white;
+        }
+
+        address,
+        i,
+        p {
+            color: white;
+        }
+
+        h3 {
+            color: $mainColor;
+            font-size: 22px;
+        }
+
+        form {
+            display: flex;
+            width: 100%;
+        }
+
+        input {
+            border: none;
+            padding: 3vh;
+            width: 70%;
+        }
+
+        [type="submit"] {
+            width: 30%;
+            background-color: $mainColor;
+            color: white;
+            transition: .4s;
+            border: none;
+            border: 1px solid $mainColor;
+        }
+
+    }
+    
+    ol  [href="#"] {
+        border: 1px solid white;
+        border-radius: 50%;
+        height: 6vh;
+        width: 6vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+    
