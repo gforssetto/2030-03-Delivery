@@ -131,7 +131,7 @@ footer aside {
     font-size: 17px;
   }
   header {
-    background-image: url(/img/bg-header.jpg);
+    background-image: url(../../img/bg-header.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -611,7 +611,7 @@ footer aside {
     font-size: 17px;
   }
   .about-header {
-    background-image: url(/img/bg-header.jpg);
+    background-image: url(../../img/bg-header.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1145,7 +1145,7 @@ footer aside {
     font-size: 17px;
   }
   header {
-    background-image: url(/img/bg-header.jpg);
+    background-image: url(../../img/bg-header.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
