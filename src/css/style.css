@@ -1242,7 +1242,7 @@ footer aside {
   .logistic p {
     text-align: center;
     color: gray;
-    padding: 0;
+    padding: 0 1vh;
   }
   .logistic a {
     color: #fe4802;
