@@ -166,7 +166,7 @@
     }
 
     // all sections
-    .services, 
+    .logistic, 
     .quote, 
     .pricing {
         align-items: center;
@@ -195,8 +195,10 @@
         }
     }
 
+
+
     // services section
-    .services {
+    .logistic {
         aside {
             @include displayColumn (3vh);
             padding-bottom: 5%;
@@ -207,6 +209,7 @@
                 justify-content: center;
                 @include displayRow (5vh);
             }
+            box-shadow: 0 0 15px darkgray;
         }
 
         strong {
@@ -216,6 +219,7 @@
         p  {
             text-align: center;
             color: gray;
+            padding: 0 1vh;
         }
 
         a {
@@ -228,7 +232,7 @@
 
             &:hover {
                 font-weight: 600;
-                font-size: 20px;
+                scale: 1.1;
                 text-decoration: underline $mainColor;
             }
         } 

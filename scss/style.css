@@ -1189,19 +1189,19 @@ footer aside {
   header aside a {
     color: white;
   }
-  .services,
+  .logistic,
   .quote,
   .pricing {
     align-items: center;
     row-gap: 2vh;
     padding: 5%;
   }
-  .services > blockquote,
+  .logistic > blockquote,
   .quote > blockquote,
   .pricing > blockquote {
     padding: 5%;
   }
-  .services h2,
+  .logistic h2,
   .quote h2,
   .pricing h2 {
     color: #1f1f2e;
@@ -1210,7 +1210,7 @@ footer aside {
     font-weight: 800;
     text-align: center;
   }
-  .services h4,
+  .logistic h4,
   .quote h4,
   .pricing h4 {
     color: #fe4802;
@@ -1219,13 +1219,14 @@ footer aside {
     font-weight: 700;
     text-align: center;
   }
-  .services aside {
+  .logistic aside {
     display: flex;
     flex-direction: column;
     row-gap: 3vh;
     padding-bottom: 5%;
+    box-shadow: 0 0 15px darkgray;
   }
-  .services aside > section {
+  .logistic aside > section {
     background-color: #fe4802;
     height: 12vh;
     align-items: center;
@@ -1235,14 +1236,15 @@ footer aside {
     -moz-column-gap: 5vh;
          column-gap: 5vh;
   }
-  .services strong {
+  .logistic strong {
     color: whitesmoke;
   }
-  .services p {
+  .logistic p {
     text-align: center;
     color: gray;
+    padding: 0 1vh;
   }
-  .services a {
+  .logistic a {
     color: #fe4802;
     display: flex;
     justify-content: center;
@@ -1250,9 +1252,9 @@ footer aside {
             text-decoration: underline lightgray;
     transition: 0.6;
   }
-  .services a:hover {
+  .logistic a:hover {
     font-weight: 600;
-    font-size: 20px;
+    scale: 1.1;
     -webkit-text-decoration: underline #fe4802;
             text-decoration: underline #fe4802;
   }
@@ -1935,13 +1937,13 @@ footer aside {
     width: 2vw;
     height: 2vw;
   }
-  .services article {
+  .logistic article {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .services article aside {
+  .logistic article aside {
     width: 45%;
   }
   .quote form input,
@@ -2337,7 +2339,7 @@ footer aside {
   }
 }
 @media (min-width: 1000px) {
-  .services article aside {
+  .logistic article aside {
     width: 20%;
   }
   .quote {
